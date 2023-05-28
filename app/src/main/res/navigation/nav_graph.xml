@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.example.recipeapp.views.SplashScreenFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreenFragment_to_foodListFragment"
+            app:destination="@id/foodListFragment"
+            app:popUpTo="@id/splashScreenFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_splashScreenFragment_to_recipeAccountFragment"
+            app:destination="@id/recipeAccountFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/foodListFragment"
+        android:name="com.example.recipeapp.views.FoodListFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_food_list" >
+        <action
+            android:id="@+id/action_foodListFragment_to_addFoodFragment"
+            app:destination="@id/addFoodFragment" />
+        <action
+            android:id="@+id/action_foodListFragment_to_detailsFoodFragment"
+            app:destination="@id/detailsFoodFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFoodFragment"
+        android:name="com.example.recipeapp.views.AddFoodFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_add_food">
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="item_id"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_addFoodFragment_to_foodListFragment"
+            app:destination="@id/foodListFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFoodFragment"
+        android:name="com.example.recipeapp.views.DetailsFoodFragment"
+        android:label="@string/food_detail_fragment_title"
+        tools:layout="@layout/fragment_details_food">
+        <argument
+            android:name="item_id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_detailsFoodFragment_to_addFoodFragment"
+            app:destination="@id/addFoodFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipeAccountFragment"
+        android:name="com.example.recipeapp.RecipeAccountFragment"
+        android:label="fragment_recipe_account"
+        tools:layout="@layout/fragment_recipe_account" >
+        <action
+            android:id="@+id/action_recipeAccountFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_recipeAccountFragment_to_loginFragment3"
+            app:destination="@id/loginFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.recipeapp.views.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment3"
+            app:destination="@id/loginFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment3"
+        android:name="com.example.recipeapp.views.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment3_to_foodListFragment"
+            app:destination="@id/foodListFragment" />
+    </fragment>
+</navigation>

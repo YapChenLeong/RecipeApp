@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">Recipe App</string>
+    <string name="food_price">Price: %1$s</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_fragment_title">Add Food</string>
+    <string name="add_new_item">Add new item</string>
+    <string name="food_detail_fragment_title">Item Details</string>
+    <string name="currency_symbol">$</string>
+    <string name="save_action">Save</string>
+    <string name="menu_req">Select Country</string>
+    <string name="item_name_req">Item Name <font color='#FF0000'>*</font></string>
+    <string name="item_price_req">Item Price <font color='#FF0000'>*</font></string>
+    <string name="edit_fragment_title">Edit Item</string>
+    <string name="delete">Delete</string>
+    <string name="edit_item">Edit Item</string>
+    <string name="delete_question">Are you sure you want to delete?</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+
+    <string-array name="food_menu">
+        <item>Chicken</item>
+        <item>Steak</item>
+        <item>Pasta</item>
+        <item>Lamb</item>
+        <item>Seafood</item>
+        <item>Dessert</item>
+    </string-array>
+
+<!--  Account Page  -->
+    <string name="started_title">Hello you</string>
+    <string name="started_sub_title">
+        Nice to meet you, come to join to see our recipe!
+        <br><b>Login</b> if you already have an account.</br>
+        <br><b>Register</b> to go started with the app.</br>
+    </string>
+
+    <string name="btn_register">REGISTER</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="login_title">Login to app</string>
+    <string name="login_sub_title">
+        <font color="#00C9B8"><b>Login</b></font> if you already have an account.
+    </string>
+    <string name="login_email">Your email or username</string>
+    <string name="login_password">Your password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="login_no_account">
+         I don\'t have an account <font color="#00C9B8"><b>Register</b></font>
+    </string>
+    <string name="login_have_account">
+         I already have an account <font color="#00C9B8"><b>Login</b></font>
+    </string>
+    <string name="register_title">Create an account</string>
+    <string name="register_sub_title">
+        <font color="#00C9B8"><b>Register</b></font> to get started with the app.
+    </string>
+</resources>
