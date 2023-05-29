@@ -49,6 +49,7 @@
     <string name="login_have_account">
          I already have an account <font color="#00C9B8"><b>Login</b></font>
     </string>
+    <string name="login_register">Login</string>
     <string name="register_title">Create an account</string>
     <string name="register_sub_title">
         <font color="#00C9B8"><b>Register</b></font> to get started with the app.

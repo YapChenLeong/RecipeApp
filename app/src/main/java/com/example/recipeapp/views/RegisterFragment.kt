@@ -2,13 +2,20 @@ package com.example.recipeapp.views
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.text.SpannableString
+import android.text.Spanned
+import android.text.method.LinkMovementMethod
+import android.text.style.ClickableSpan
 import android.util.Patterns
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.text.HtmlCompat
+import androidx.core.text.buildSpannedString
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.recipeapp.R
@@ -32,10 +39,26 @@ class RegisterFragment : Fragment() {
 
     private var _binding: FragmentRegisterBinding? = null
     private val binding get() = _binding!!
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+//        val clickableSpan = object : ClickableSpan() {
+//            override fun onClick(widget: View) {
+//                // Handle the click action for the "Register" text
+//                // For example, start a new activity or show a dialog
+//                val action = RegisterFragmentDirections.actionRegisterFragmentToLoginFragment3()
+//                findNavController().navigate(action)
+//            }
+//        }
+//
+//        val spannableString = SpannableString(getString(R.string.login_have_account))
+//        val startIndex = spannableString.indexOf("Login")
+//        val endIndex = startIndex + "Login".length
+//
+//        spannableString.setSpan(clickableSpan, startIndex, endIndex, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+//
+//        binding.tvNoAccount.text = spannableString
+//        binding.tvNoAccount.movementMethod = LinkMovementMethod.getInstance()
     }
 
     override fun onCreateView(
@@ -46,6 +69,7 @@ class RegisterFragment : Fragment() {
         // Inflate the layout for this fragment
         // Inflate the layout for this fragment
         _binding = FragmentRegisterBinding.inflate(inflater, container, false)
+
 
         return binding.root
     }
@@ -92,6 +116,7 @@ class RegisterFragment : Fragment() {
         binding.btnRegister.setOnClickListener{
             addNewCustomer()
         }
+
     }
 
     private fun showNameExistAlert(isNotValid: Boolean){
