@@ -96,11 +96,11 @@
         style="@style/ButtonGreen"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/tv_no_account"
+        app:layout_constraintBottom_toTopOf="@id/tv_have_account"
         />
 
     <TextView
-        android:id="@+id/tv_no_account"
+        android:id="@+id/tv_have_account"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/login_have_account"

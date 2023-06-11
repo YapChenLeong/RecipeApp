@@ -14,10 +14,8 @@ class FoodItemListAdapter(
     private val onItemClicked: (Item) -> Unit
     ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-
 //    private val dataset = DataSource.foods
 var list : List<Item> = listOf()
-
 
     override fun onCreateViewHolder(parent: ViewGroup,viewType: Int): RecyclerView.ViewHolder {
 //        return when(layout){

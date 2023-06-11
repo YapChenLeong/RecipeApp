@@ -23,6 +23,7 @@ import com.example.recipeapp.RecipeApplication
 import com.example.recipeapp.databinding.FragmentRegisterBinding
 import com.example.recipeapp.viewModels.CustomerViewModel
 import com.example.recipeapp.viewModels.CustomerViewModelFactory
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.jakewharton.rxbinding2.widget.RxTextView
 import io.reactivex.Observable
 
@@ -42,29 +43,14 @@ class RegisterFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-//        val clickableSpan = object : ClickableSpan() {
-//            override fun onClick(widget: View) {
-//                // Handle the click action for the "Register" text
-//                // For example, start a new activity or show a dialog
-//                val action = RegisterFragmentDirections.actionRegisterFragmentToLoginFragment3()
-//                findNavController().navigate(action)
-//            }
-//        }
-//
-//        val spannableString = SpannableString(getString(R.string.login_have_account))
-//        val startIndex = spannableString.indexOf("Login")
-//        val endIndex = startIndex + "Login".length
-//
-//        spannableString.setSpan(clickableSpan, startIndex, endIndex, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
-//
-//        binding.tvNoAccount.text = spannableString
-//        binding.tvNoAccount.movementMethod = LinkMovementMethod.getInstance()
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        val view = requireActivity().findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+        view.visibility = View.GONE
         (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
         // Inflate the layout for this fragment
         // Inflate the layout for this fragment
@@ -117,6 +103,20 @@ class RegisterFragment : Fragment() {
             addNewCustomer()
         }
 
+        val spannableString = SpannableString(getString(R.string.login_have_account))
+        val registerText = getString(R.string.login_register)
+
+        val clickableSpan = object : ClickableSpan() {
+            override fun onClick(widget: View) {
+                // Handle the click action for the "Register" text
+                // For example, start a new activity or show a dialog
+                val action = RegisterFragmentDirections.actionRegisterFragmentToLoginFragment3()
+                findNavController().navigate(action)
+            }
+        }
+
+        spannableString.setSpan(clickableSpan, spannableString.indexOf("Login"), spannableString.length, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        binding.tvHaveAccount
     }
 
     private fun showNameExistAlert(isNotValid: Boolean){

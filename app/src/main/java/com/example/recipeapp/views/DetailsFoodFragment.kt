@@ -18,6 +18,7 @@ import com.example.recipeapp.viewModels.RecipeViewModelFactory
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class DetailsFoodFragment : Fragment() {
+    //The purpose of the navigationArgs property is to retrieve the arguments passed to the DetailsFoodFragment using the Navigation component's Safe Args feature.
     private val navigationArgs: DetailsFoodFragmentArgs by navArgs()
     lateinit var item: Item
 

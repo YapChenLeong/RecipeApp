@@ -8,9 +8,12 @@
         <entry key="app/src/main/res/drawable/bg_text_field.xml" value="0.1615" />
         <entry key="app/src/main/res/drawable/ic_edit.xml" value="0.1035" />
         <entry key="app/src/main/res/drawable/ic_email.xml" value="0.1035" />
+        <entry key="app/src/main/res/drawable/ic_grid_layout.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_listdata.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_lock.xml" value="0.1035" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.23177083333333334" />
         <entry key="app/src/main/res/layout/dropdown_menu.xml" value="0.18333333333333332" />
+        <entry key="app/src/main/res/layout/fragment_account.xml" value="0.335" />
         <entry key="app/src/main/res/layout/fragment_add_food.xml" value="0.23735408560311283" />
         <entry key="app/src/main/res/layout/fragment_details_food.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_food_list.xml" value="0.2390625" />
@@ -19,6 +22,8 @@
         <entry key="app/src/main/res/layout/fragment_register.xml" value="0.2046875" />
         <entry key="app/src/main/res/layout/fragment_splash_screen.xml" value="0.2390625" />
         <entry key="app/src/main/res/layout/grid_foods_item.xml" value="0.15" />
+        <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.2046875" />
+        <entry key="app/src/main/res/menu/layout_menu.xml" value="0.2046875" />
       </map>
     </option>
   </component>

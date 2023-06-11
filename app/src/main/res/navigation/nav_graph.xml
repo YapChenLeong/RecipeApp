@@ -24,6 +24,9 @@
         android:name="com.example.recipeapp.views.FoodListFragment"
         android:label="@string/app_name"
         tools:layout="@layout/fragment_food_list" >
+<!--        <argument-->
+<!--            android:name="customer_id"-->
+<!--            app:argType="integer" />-->
         <action
             android:id="@+id/action_foodListFragment_to_addFoodFragment"
             app:destination="@id/addFoodFragment" />
@@ -89,5 +92,14 @@
         <action
             android:id="@+id/action_loginFragment3_to_foodListFragment"
             app:destination="@id/foodListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.example.recipeapp.views.AccountFragment"
+        android:label="@string/account"
+        tools:layout="@layout/fragment_account" >
+        <action
+            android:id="@+id/action_accountFragment_to_loginFragment3"
+            app:destination="@id/loginFragment3" />
     </fragment>
 </navigation>
